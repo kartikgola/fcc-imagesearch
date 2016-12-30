@@ -2,12 +2,38 @@ extends layout
 
 block content
   h1= title
-  p Welcome to # title
-  p Usage : 
-    code https://myapp.herokuapp.com/api/imagesearch/{search}?{offset}
-  p 
-    b {search}
-    | -> Search item
-  p 
-    b {offset} 
-    | -> Key-value pair with value as number of results to get(Maximum 60)
+  p This is an API for getting JSON response of image search.
+  br
+  h3 Usage -
+  ol
+    li 
+      b Image Search
+      br
+      code https://img-abstraction-sub.herokuapp.com/api/imagesearch/{search}?{offset} 
+      br
+      b {search} 
+      | - Search item
+      br
+      b {offset} 
+      | - Key-value pair with value as number of results to get(Maximum 60)
+      br
+      br
+    li 
+      b Get latest results
+      br
+      code https://img-abstraction-sub.herokuapp.com/api/latest/imagesearch
+
+  p
+    b Example - 
+    ol
+      li
+        | To search for an imagesearch
+        br
+        a(href='https://img-abstraction-sub.herokuapp.com/api/imagesearch/Android?offset=10') https://img-abstraction-sub.herokuapp.com/api/imagesearch/Android?offset=10
+        br
+        br
+      li
+        | To get the latest searches
+        br
+        a(href='https://img-abstraction-sub.herokuapp.com/api/latest/imagesearch') https://img-abstraction-sub.herokuapp.com/api/latest/imagesearch
+
