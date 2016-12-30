@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to # title
+  p Usage : 
+    code https://myapp.herokuapp.com/api/imagesearch/{search}?{offset}
+  p 
+    b {search}
+    | -> Search item
+  p 
+    b {offset} 
+    | -> Key-value pair with value as number of results to get(Maximum 60)
